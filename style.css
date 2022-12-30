@@ -1,190 +1,197 @@
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+.dark-mode {
+  background-color: grey;
+  color: white;
+  transition: 0.5s;
 }
 body{
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.dark-mode {
-    background-color: grey;
-    color: black;
-    transition: 0.5s;
-  }
-
-label{
-    position: relative;
-    top: 0%;
-    background-color: #606263;
-    color: transparent;
-    border-radius: 50%;
+.head {
+  width: 100%;
+  background-color: #555;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
 }
 
-input[type="checkbox"]{
-    visibility: hidden;
-    display: none;
-}
-.check{
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #092c3e;
-    cursor: pointer;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: ease-in 0.5s;
-}
-input[type="checkbox"]:checked ~ .check{
-    background: white;
-}
-.check::before{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    background-color: #fff;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-input[type="checkbox"]:checked ~ .check::before{
-    transform: translateX(-50px);
-
-}
-.check::after{
-    justify-content: right;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    background: #092c3e;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transition: 0.5s;
-    transform: translateX(50px);
-}
-input[type="checkbox"]:checked ~ .check::after{
-    transform: translateX(0px);
+.head a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
 }
 
-li:hover{ background-color: whitesmoke;
-    border-radius: 50% 20px;
-    box-sizing: 10px;
-
+.head a:hover {
+  background-color: #000;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-
-}
-.header{
-    padding: 389px; ;
-    text-align: center;
-    background:#4D6A7E;
-    color: black;
+.active {
+  background-color: #04AA6D;
 }
 
-.header h1{
-    font-size: 50px;
-}
-.header p{
-    text-align: center;
-    font-size: 30px;
-}
-.logo h4 {
-    text-transform: lowercase;
-    cursor: default;
-    letter-spacing: 3px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #01161e;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    font-weight: 400;
-}
-
-nav {
-    float: left;
-    display: flex;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-around;
-    align-items: center;
-    background: #eff6e0b0;
-    min-height: 10vh;
-    width: 100%;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-}
-  
-.nav-links li {
-    list-style: none;
-}
-  
-.nav-links a {
-    position: relative;
-    color: #01161e;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.nav-links a:hover {
-    color: #20292c;
-}
-
-@media screen and (max-width: 992px) {
-    .nav-links a {
-        font-size: 1rem;
-        width: 40%;
-    }
-    .logo h4 {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .nav-links a {
-        display: none;
-    }
+.footer{
+  text-align: center;
+  background-color: #555;
+  margin-top: 150px;
+  padding: 1px;
 }
 
 .home{
-    position: relative;
-    top: 100px;
-    text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.project{
-    position: relative;
-    top: 100px;
-    text-align: center;
+.main{
+  text-align: center;
+  padding: 300px 15px 500px;
+  font-size: 30px;
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.second{
+  text-align: center;
+  margin-top: 0px;
+  padding:1px 15px 500px;
+  font-size:30px;
+  background-color: #f1f1f1;
+  color: #000;
 }
 
 .about{
-    position: relative;
-    top: 100px;
-    text-align: center;
+  text-align: center;
+  padding: 1px 1px 1px;
+  background-color: #555;
+}
+
+#about{
+  padding: 0px 0px 80px;
+}
+
+#projects{
+  text-align: center;
+  background-color: #555;
+  padding: 1px;
+  margin-top: 200px;
+}
+
+a .icon{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#mylinks{
+  display: none;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 386px;
+  width: 30%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+/* Style the tab content */
+.tabcontent {
+  background-color: #f1f1f1;
+  color: #000;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  width: 100%;
+  height: 386px;
+  text-align: center;
+  transition: 1s;
+}
+
+.tabcontent a{
+  position: absolute;
+  font-size: 25px;
+  cursor: pointer;
+  color: #000;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #555;
+}
+.image{
+  max-width: 330px;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+}
+#game h6{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.tabcontent p{
+  font-size: 20px;
+}
+
+.content1 {
+  float:left;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 470px;
+  width: 35%;
+}
+
+.content2 {
+  float: left;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 470px;
+  width: 35%;
+}
+.content3 {
+  float: left;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 470px;
+  width: 30%;
 }
